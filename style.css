@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Darkcyan: hsl(158, 36%, 37%);
+  --ActiveStates: hsl(158, 50%, 22%);
+  --Cream: hsl(30, 38%, 92%);
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/**typography **/
+
+h1 {
+  font-family: "Fraunces", sans-serif;
+  color: var(--Verydarkblue);
+  line-height: 1em;
+  font-size: 2.3rem;
+  max-width: 83%;
+}
+
+h2 {
+  font-family: "Fraunces", sans-serif;
+  color: var(--Darkcyan);
+  font-size: 2em;
+  line-height: 1em;
+}
+
+h2 span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.4em;
+  text-decoration: line-through;
+  color: var(--Darkgrayishblue);
+  font-weight: lighter;
+  vertical-align: top;
+  margin-left: 1em;
+}
+
+p {
+  font-size: 0.9em;
+  font-family: "Montserrat", sans-serif;
+  color: var(--Darkgrayishblue);
+  line-height: 1.6em;
+  max-width: 85%;
+}
+
+h5 {
+  font-family: "Montserrat", sans-serif;
+  text-transform: uppercase;
+  color: var(--Darkgrayishblue);
+  letter-spacing: 0.25em;
+}
+
+@media screen and (min-width: 0px) and (max-width: 375px) {
+  h1 {
+    font-family: "Fraunces", sans-serif;
+    color: var(--Verydarkblue);
+    line-height: 1em;
+    max-width: 100%;
+  }
+
+  h2 {
+    font-family: "Fraunces", sans-serif;
+    color: var(--Darkcyan);
+    font-size: 2em;
+    line-height: 1em;
+  }
+
+  h2 span {
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.4em;
+    text-decoration: line-through;
+    color: var(--Darkgrayishblue);
+    font-weight: lighter;
+    vertical-align: top;
+    margin-left: 1em;
+  }
+
+  p {
+    font-size: 0.9em;
+    font-family: "Montserrat", sans-serif;
+    color: var(--Darkgrayishblue);
+    line-height: 1.6em;
+    max-width: 100%;
+  }
+
+  h5 {
+    font-family: "Montserrat", sans-serif;
+    text-transform: uppercase;
+    color: var(--Darkgrayishblue);
+    letter-spacing: 0.25em;
+  }
+}
+
+/** layout **/
+
+html {
+  background-color: var(--Cream);
+}
+
+body {
+  padding: 5em 0;
+}
+
+main {
+  width: 45%;
+  height: auto;
+  display: flex;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+main .image-container {
+  width: 50%;
+  border-radius: 10px 0 0 10px;
+  background-image: url(./images/image-product-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+main .text-container {
+  width: 50%;
+  padding: 2em;
+}
+
+button {
+  width: 100%;
+  background-color: var(--Darkcyan);
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  border: 0;
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: var(--ActiveStates);
+}
+
+svg {
+  margin-right: 0.5em;
+}
+
+@media screen and (min-width: 0px) and (max-width: 375px) {
+  body {
+    padding: 1em 0;
+  }
+
+  main {
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  main .image-container {
+    width: 100%;
+    height: 15rem;
+    border-radius: 10px 10px 0 0;
+    background-image: url(./images/image-product-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  button {
+    margin-bottom: 2em;
+  }
+
+  main .text-container {
+    width: 90%;
+    padding: 0 1em;
+  }
+}
